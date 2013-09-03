@@ -23,7 +23,7 @@ Object.defineProperty(Function.prototype, 'promise', {
   }
 });
 
-var properties = ['map', 'some', 'filter', 'reduce'];
+var properties = ['map', 'some', 'filter', 'reduce', 'every'];
 
 properties.forEach(function(property) {
   Q.makePromise.prototype[property] = function(iterator) {

@@ -1,7 +1,7 @@
 # dotQ
 另一个Q
 
-## 用法
+## 介绍
 
 当异步嵌套过多时，常会遇到这种情况：
 
@@ -55,6 +55,10 @@ dotQ 为 Promise 增加了一些常用的 Array 的方法。
 	    console.log(result); // [ 13, 14, 15 ]
 	  });
 
+
+## 如何在项目中使用
+In node.js, Each file loaded shares the same primordial objects like Object, Array, etc,
+so you can just require dotQ once in your initialization, after which you can use dotQ everywhere.
 
 ## OMG IT EXTENDS FUNCTION???!?!@
 https://github.com/visionmedia/should.js/#omg-it-extends-object
