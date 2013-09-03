@@ -2,7 +2,6 @@
 Yet another [Q](https://github.com/kriskowal/q).
 
 ## Introduce
-
 The following code shows a pretty common case of deeply nested callbacks in JavaScript. It doesn't take a genius to figure out that these nested callbacks will eventually become a bit of a headache:
 
 	step1(function (value1) {
@@ -34,9 +33,9 @@ With the dotQ library, you can flatten the pyramid.
 	  });
 
 ## Difference between dotQ and Q
-dotQ is based on Q. dotQ extends the `Function` object with a `promise` method in order to convert the Node.js style callback(`function(err, result)`) into a Q Promise.
+dotQ is based on Q. dotQ extends the `Function` object with a `promise` method in order to convert the Node.js style callbacks(`function(err, result)`) into Q Promises.
 
-What's more, the style of dotQ works better with the express-promise library. 
+What's more, the style of dotQ works better with the express-promise library.
 
 ## Shortcuts
 
@@ -59,6 +58,10 @@ dotQ also extends the Q Promise with some useful methods of Array object. For ex
 ## How to use
 In node.js, Each file loaded shares the same primordial objects like Object, Array, etc,
 so you can just require dotQ once in your initialization, after which you can use dotQ everywhere.
+
+### Install
+
+`npm install dotq`
 
 ## OMG IT EXTENDS FUNCTION???!?!@
 https://github.com/visionmedia/should.js/#omg-it-extends-object
