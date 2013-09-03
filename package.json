@@ -1,0 +1,7 @@
+{
+  "name": "asyncq",
+  "version": "0.0.1",
+  "dependencies": {
+    "q": "~0.9.6"
+  }
+}
