@@ -1,9 +1,9 @@
 # dotQ
-另一个Q
+Yet another [Q](https://github.com/kriskowal/q).
 
-## 介绍
+## Introduce
 
-当异步嵌套过多时，常会遇到这种情况：
+The following code shows a pretty common case of deeply nested callbacks in JavaScript. It doesn't take a genius to figure out that these nested callbacks will eventually become a bit of a headache:
 
 	step1(function (value1) {
 	  step2(value1, function(value2) {
@@ -15,7 +15,7 @@
 	  });
 	});
 
-使用 dotQ 可以显著减少嵌套：
+With the dotQ library, you can flatten the pyramid.
 
 	require('dotq');
 
@@ -33,15 +33,15 @@
 	    // Do something with value4
 	  });
 
-## 与 Q 的区别
-dotQ 基于 Q。dotQ 通过为 `Function.prototype` 加入 `promise` 方法来实现将node.js风格的回调函数转换为 Q 的 Promise。而且 dotQ 扩展了 Q 的 Promise（见后文）。
+## Difference between dotQ and Q
+dotQ is based on Q. dotQ extends the `Function` object with a `promise` method in order to convert the Node.js style callback(`function(err, result)`) into a Q Promise.
 
-此外 dotQ 的风格更加适合 express-promise 模块。
+What's more, the style of dotQ works better with the express-promise library. 
 
-## 扩展内容
+## Shortcuts
 
 ### map / reduce / filter / some / every
-dotQ 为 Promise 增加了一些常用的 Array 的方法。
+dotQ also extends the Q Promise with some useful methods of Array object. For example:
 
 	function anAsyncFunction(number, callback) {
 	  callback(null, [number, number + 1, number + 2]);
@@ -56,7 +56,7 @@ dotQ 为 Promise 增加了一些常用的 Array 的方法。
 	  });
 
 
-## 如何在项目中使用
+## How to use
 In node.js, Each file loaded shares the same primordial objects like Object, Array, etc,
 so you can just require dotQ once in your initialization, after which you can use dotQ everywhere.
 
