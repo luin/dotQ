@@ -1,9 +1,6 @@
 # dotQ
 Yet another [Q](https://github.com/kriskowal/q).
 
-### Install
-`npm install dotq`
-
 ## Introduce
 The following code shows a pretty common case of deeply nested callbacks in JavaScript. It doesn't take a genius to figure out that these nested callbacks will eventually become a bit of a headache:
 
@@ -34,6 +31,9 @@ With the dotQ library, you can flatten the pyramid.
 	  .then(function(value4) {
 	    // Do something with value4
 	  });
+
+## Install
+`npm install dotq`
 
 ## Difference between dotQ and Q
 dotQ is based on Q. dotQ extends the `Function` object with a `promise` method in order to convert the Node.js style callbacks(`function(err, result)`) into Q Promises.
