@@ -33,7 +33,7 @@ With the dotQ library, you can flatten the pyramid.
 	  });
 
 ## Install
-`npm install dotq`
+    npm install dotq
 
 ## Difference between dotQ and Q
 dotQ is based on Q. dotQ extends the `Function` object with a `promise` method in order to convert the Node.js style callbacks(`function(err, result)`) into Q Promises.
