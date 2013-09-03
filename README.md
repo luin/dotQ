@@ -1,6 +1,9 @@
 # dotQ
 Yet another [Q](https://github.com/kriskowal/q).
 
+### Install
+`npm install dotq`
+
 ## Introduce
 The following code shows a pretty common case of deeply nested callbacks in JavaScript. It doesn't take a genius to figure out that these nested callbacks will eventually become a bit of a headache:
 
@@ -58,10 +61,6 @@ dotQ also extends the Q Promise with some useful methods of Array object. For ex
 ## How to use
 In node.js, Each file loaded shares the same primordial objects like Object, Array, etc,
 so you can just require dotQ once in your initialization, after which you can use dotQ everywhere.
-
-### Install
-
-`npm install dotq`
 
 ## OMG IT EXTENDS FUNCTION???!?!@
 https://github.com/visionmedia/should.js/#omg-it-extends-object
