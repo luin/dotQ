@@ -1,6 +1,6 @@
 {
-  "name": "asyncq",
-  "version": "0.1.0",
+  "name": "dotq",
+  "version": "0.1.1",
   "scripts": {
     "test": "mocha -R spec"
   },
@@ -11,6 +11,11 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
+  "homepage": "https://github.com/luin/dotq",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/luin/dotq.git"
+  },
   "engines": [
     "node >=0.6.0"
   ],
