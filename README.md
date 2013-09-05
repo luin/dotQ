@@ -1,7 +1,7 @@
 # dotQ
 Yet another [Q](https://github.com/kriskowal/q).
 
-[![Build Status](https://travis-ci.org/luin/dotq.png?branch=master)](https://travis-ci.org/luin/dotq)
+[![Build Status](https://travis-ci.org/luin/dotQ.png?branch=master)](https://travis-ci.org/luin/dotQ)
 
 ## Introduce
 The following code shows a pretty common case of deeply nested callbacks in JavaScript. It doesn't take a genius to figure out that these nested callbacks will eventually become a bit of a headache:
