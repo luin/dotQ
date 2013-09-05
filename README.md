@@ -40,7 +40,7 @@ With the dotQ library, you can flatten the pyramid.
 ## Difference between dotQ and Q
 dotQ is based on Q. dotQ extends the `Function` object with a `promise` method in order to convert the Node.js style callbacks(`function(err, result)`) into Q Promises.
 
-What's more, the style of dotQ works better with the express-promise library.
+What's more, the style of dotQ works better with the [express-promise](https://github.com/luin/express-promise) library.
 
 ## Shortcuts
 
