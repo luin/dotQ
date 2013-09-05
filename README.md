@@ -1,36 +1,38 @@
 # dotQ
 Yet another [Q](https://github.com/kriskowal/q).
 
+[![Build Status](https://travis-ci.org/luin/dotq.png?branch=master)](https://travis-ci.org/luin/dotq)
+
 ## Introduce
 The following code shows a pretty common case of deeply nested callbacks in JavaScript. It doesn't take a genius to figure out that these nested callbacks will eventually become a bit of a headache:
 
-	step1(function (value1) {
-	  step2(value1, function(value2) {
-	    step3(value2, function(value3) {
-	      step4(value3, function(value4) {
-	        // Do something with value4
-	      });
-	    });
-	  });
-	});
+    step1(function (value1) {
+      step2(value1, function(value2) {
+        step3(value2, function(value3) {
+          step4(value3, function(value4) {
+            // Do something with value4
+          });
+        });
+      });
+    });
 
 With the dotQ library, you can flatten the pyramid.
 
-	require('dotq');
+    require('dotq');
 
-	step1.promise()
-	  .then(function(value1) {
-	    return step2.promise(value1);
-	  })
-	  .then(function(value2) {
-	    return step3.promise(value2);
-	  })
-	  .then(function(value3) {
-	    return step4.promise(value3);
-	  })
-	  .then(function(value4) {
-	    // Do something with value4
-	  });
+    step1.promise()
+      .then(function(value1) {
+        return step2.promise(value1);
+      })
+      .then(function(value2) {
+        return step3.promise(value2);
+      })
+      .then(function(value3) {
+        return step4.promise(value3);
+      })
+      .then(function(value4) {
+        // Do something with value4
+      });
 
 ## Install
     npm install dotq
@@ -45,17 +47,17 @@ What's more, the style of dotQ works better with the express-promise library.
 ### map / reduce / filter / some / every
 dotQ also extends the Q Promise with some useful methods of Array object. For example:
 
-	function anAsyncFunction(number, callback) {
-	  callback(null, [number, number + 1, number + 2]);
-	}
+    function anAsyncFunction(number, callback) {
+      callback(null, [number, number + 1, number + 2]);
+    }
 
-	anAsyncFunction.promise(3)
-	  .map(function(n) {
-	    return n + 10;
-	  })
-	  .then(function(result) {
-	    console.log(result); // [ 13, 14, 15 ]
-	  });
+    anAsyncFunction.promise(3)
+      .map(function(n) {
+        return n + 10;
+      })
+      .then(function(result) {
+        console.log(result); // [ 13, 14, 15 ]
+      });
 
 
 ## How to use
